@@ -15,6 +15,9 @@
 #
 #   ./tests/run-tests.sh <model_name>
 #
+# When invoked via 'make tests', <model_name> defaults to 'tiny.en'.
+# You can override it with 'make MODEL=<name> tests'.
+#
 
 cd `dirname $0`
 
