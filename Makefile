@@ -286,5 +286,6 @@ tiny.en tiny base.en base small.en small medium.en medium large-v1 large: main
 #
 
 .PHONY: tests
+MODEL ?= tiny.en
 tests:
-	bash ./tests/run-tests.sh
+	bash ./tests/run-tests.sh $(MODEL)
