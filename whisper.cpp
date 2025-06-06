@@ -2522,7 +2522,7 @@ struct whisper_context * whisper_init_from_file_no_state(const char * path_model
     loader.read = [](void * ctx, void * output, size_t read_size) {
         std::ifstream * fin = (std::ifstream*)ctx;
         fin->read((char *)output, read_size);
-        return read_size;
+        return (size_t) fin->gcount();
     };
 
     loader.eof = [](void * ctx) {
